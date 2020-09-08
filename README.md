@@ -8,10 +8,11 @@ A filter for 60K will return positions for 60K, 70K, 80K, and so on while that o
 Due to manual data collection, the same position, depending on its salary, can appear in the untreated data set several times under different salary labels. 
 
 The code will first reshape the data from long to wide format (using 'unstack' command) and then remove duplicate positions, keeping results from the filter with the highest salary for a given position (the last occurrence of the same position in the data set).
-There is no guarantee that ALL duplicates are removed - some positions, while being identical, might have been posted, say, 12 and 13 days ago and will appear twice (but this is not widespread; to be improved).  
 
-After these transformations, one line will correspond to one position. Positions with salary not available will still have 'All' in the Salary field (this should be interpreted as NA). 
-This reshaped data is available in the file data_reshaped-05-09-2020.csv.
+
+These transformations result in a dataframe with one line corresponding to one position. Positions with salary not available will still have 'All' in the Salary field (this should be interpreted as NA). This reshaped data is available in the file data_reshaped-05-09-2020.csv.
+
+There is no guarantee that ALL duplicates are removed, though. Some positions, while being identical, might have been posted, say, 12 and 13 days ago and will appear twice (but this is not widespread; to be improved).  
 
 So far, a brief analysis by location/recency/salary/company is available. To be continued...
 
