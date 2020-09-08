@@ -12,7 +12,7 @@ The code will first reshape the data from long to wide format (using 'unstack' c
 
 These transformations result in a dataframe with one line corresponding to one position. Positions with salary not available will still have 'All' in the Salary field (this should be interpreted as NA). This reshaped data is available in the file data_reshaped-05-09-2020.csv.
 
-There is no guarantee that ALL duplicates are removed, though. Some positions, while being identical, might have been posted, say, 12 and 13 days ago and will appear twice (but this is not widespread; to be improved).  
+There is no guarantee that *all* duplicates are removed, though. Some positions, while being identical, might have been posted, say, 12 and 13 days ago and will appear twice (but this is not widespread; to be improved).  
 
 So far, a brief analysis by location/recency/salary/company is available. To be continued...
 
